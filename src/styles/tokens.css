@@ -1,24 +1,26 @@
 /* ─── Design Tokens ────────────────────────────────────────────── */
 :root {
-  /* Colour palette — warm, natural, Benin-rooted */
-  --color-forest:      #2D4A2D;   /* deep botanical green — primary */
-  --color-forest-dark: #1e3320;   /* hover/active state */
-  --color-forest-light:#3d6340;   /* lighter green for secondary uses */
+  /* Colour palette — clean, commerce-ready, Benin Republic roots */
+  --color-forest:      #003900;   /* deep botanical green — primary */
+  --color-forest-dark: #002800;   /* hover/active state */
+  --color-forest-light:#0C821F;   /* lighter green for secondary uses */
+  --color-gold:        #FEB310;   /* amber gold — CTA buttons */
+  --color-gold-dark:   #d9940a;   /* gold hover */
   --color-earth:       #6B4C1E;   /* warm brown — accents, borders */
   --color-earth-light: #8B6914;   /* golden brown — prices, labels */
-  --color-cream:       #F5F0E8;   /* warm page background */
-  --color-cream-dark:  #EDE5D6;   /* slightly deeper cream — section dividers */
-  --color-parchment:   #D4C4A0;   /* muted tan — secondary backgrounds */
-  --color-ink:         #1C1C18;   /* near-black — primary text */
-  --color-ink-muted:   #5C5848;   /* secondary/body text */
-  --color-ink-faint:   #9C9480;   /* placeholder, caption text */
+  --color-cream:       #ffffff;   /* page background — clean white */
+  --color-cream-dark:  #f1f5f9;   /* light slate — section dividers, cards */
+  --color-parchment:   #e2e8f0;   /* slate-200 — borders */
+  --color-ink:         #0f172a;   /* near-black — primary text */
+  --color-ink-muted:   #475569;   /* secondary/body text */
+  --color-ink-faint:   #94a3b8;   /* placeholder, caption text */
   --color-white:       #FFFFFF;
-  --color-error:       #8B2020;   /* earth-red — validation errors */
-  --color-success:     #2D6B3A;   /* deep green — success states */
+  --color-error:       #dc2626;   /* red-600 — validation errors */
+  --color-success:     #16a34a;   /* green-600 — success states */
 
-  /* Typography */
-  --font-serif:    "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --font-sans:     "DM Sans", system-ui, -apple-system, sans-serif;
+  /* Typography — unified Plus Jakarta Sans throughout */
+  --font-serif:    "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-sans:     "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
 
   --text-xs:    0.75rem;    /* 12px */
   --text-sm:    0.875rem;   /* 14px */
@@ -33,7 +35,7 @@
   --text-7xl:   4.5rem;     /* 72px */
 
   --leading-tight:  1.1;
-  --leading-snug:   1.3;
+  --leading-snug:   1.25;
   --leading-normal: 1.6;
   --leading-relaxed:1.75;
 
@@ -56,13 +58,14 @@
   --max-width:         1200px;
   --max-width-text:    680px;
   --nav-height:        72px;
-  --border-radius-sm:  4px;
-  --border-radius:     8px;
-  --border-radius-lg:  16px;
+  --border-radius-sm:  6px;
+  --border-radius:     12px;
+  --border-radius-lg:  24px;
 
-  /* Shadows — used sparingly */
-  --shadow-sm:  0 1px 3px rgba(28, 28, 24, 0.08);
-  --shadow-md:  0 4px 16px rgba(28, 28, 24, 0.10);
+  /* Shadows */
+  --shadow-sm:  0 1px 3px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md:  0 4px 16px rgba(15, 23, 42, 0.10), 0 2px 6px rgba(15, 23, 42, 0.06);
+  --shadow-lg:  0 10px 40px rgba(15, 23, 42, 0.12);
 
   /* Transitions */
   --transition-fast:   150ms ease;

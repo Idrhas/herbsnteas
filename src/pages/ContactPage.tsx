@@ -106,7 +106,7 @@ export default function ContactPage() {
                   </svg>
                   <div>
                     <p className={styles.contactLabel}>Location</p>
-                    <p className={styles.contactValue}>Benin City, Edo State, Nigeria</p>
+                    <p className={styles.contactValue}>Cotonou, Benin Republic</p>
                   </div>
                 </div>
               </div>
@@ -143,14 +143,14 @@ export default function ContactPage() {
               </div>
 
               {/* Map placeholder */}
-              <div className={styles.mapWrapper} aria-label="Map showing Benin City, Edo State, Nigeria">
+              <div className={styles.mapWrapper} aria-label="Map showing Cotonou, Benin Republic">
                 <div className={styles.mapPlaceholder}>
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
                   </svg>
-                  <p>Benin City, Edo State, Nigeria</p>
+                  <p>Cotonou, Benin Republic</p>
                   <a
-                    href="https://maps.google.com/?q=Benin+City,+Edo+State,+Nigeria"
+                    href="https://maps.google.com/?q=Cotonou,+Benin+Republic"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.mapLink}

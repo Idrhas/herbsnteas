@@ -17,7 +17,7 @@ body {
   font-size: var(--text-base);
   line-height: var(--leading-normal);
   color: var(--color-ink);
-  background-color: var(--color-cream);
+  background-color: var(--color-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -49,9 +49,10 @@ ul, ol {
   list-style: none;
 }
 
+/* Headings — bold sans-serif, no more serif/editorial feel */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
-  font-weight: 500;
+  font-family: var(--font-sans);
+  font-weight: 700;
   line-height: var(--leading-snug);
   color: var(--color-ink);
 }

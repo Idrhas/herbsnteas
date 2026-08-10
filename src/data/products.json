@@ -1,102 +1,102 @@
 [
   {
     "id": "ht-001",
-    "name": "Benin Moringa Blend",
+    "name": "Moringa Blend",
     "category": "herbal-tea",
     "teaType": "Herbal Blend",
-    "description": "Dried moringa leaves hand-harvested from farms in Benin. Clean, grassy, and quietly earthy — a morning cup that does not shout.",
-    "origin": "Benin City, Edo State, Nigeria",
+    "description": "Dried moringa leaves hand-harvested from farms in Benin Republic. Clean, grassy, and quietly earthy — a morning cup that does not shout.",
+    "origin": "Benin Republic",
     "ingredients": "Dried moringa leaves (100%)",
     "brewingInstructions": "Steep 1 tsp in 200ml water at 85°C for 4 minutes.",
     "price": 2800,
     "currency": "NGN",
     "inStock": true,
     "featured": true,
-    "imageUrl": "/images/products/moringa-blend.jpg",
+    "imageUrl": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&h=600&q=80",
     "variants": [
       { "size": "20 bags", "weight": "30g" },
       { "size": "40 bags", "weight": "60g" }
     ],
-    "tags": ["moringa", "herbal", "caffeine-free", "benin", "nigerian herbal tea"]
+    "tags": ["moringa", "herbal", "caffeine-free", "benin republic", "west african herbal tea"]
   },
   {
     "id": "ht-002",
     "name": "Hibiscus & Ginger",
     "category": "herbal-tea",
     "teaType": "Herbal Blend",
-    "description": "Sun-dried hibiscus flowers from the Benin region, blended with dried ginger root. Tart, warming, and good either hot or cold.",
-    "origin": "Benin City, Edo State, Nigeria",
+    "description": "Sun-dried hibiscus flowers from Benin Republic, blended with dried ginger root. Tart, warming, and good either hot or cold.",
+    "origin": "Benin Republic",
     "ingredients": "Dried hibiscus flowers, dried ginger root",
     "brewingInstructions": "Steep 1–2 tsp in 200ml boiling water for 5–6 minutes. Add honey to taste.",
     "price": 2500,
     "currency": "NGN",
     "inStock": true,
     "featured": true,
-    "imageUrl": "/images/products/hibiscus-ginger.jpg",
+    "imageUrl": "https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?auto=format&fit=crop&w=600&h=600&q=80",
     "variants": [
       { "size": "20 bags", "weight": "30g" },
       { "size": "40 bags", "weight": "60g" },
       { "size": "Loose Leaf 100g", "weight": "100g" }
     ],
-    "tags": ["hibiscus", "ginger", "herbal", "caffeine-free", "herbal tea benin"]
+    "tags": ["hibiscus", "ginger", "herbal", "caffeine-free", "zobo", "bissap"]
   },
   {
     "id": "ht-003",
     "name": "Lemon Verbena & Mint",
     "category": "herbal-tea",
     "teaType": "Herbal Blend",
-    "description": "Bright lemon verbena leaves grown in Benin, paired with cool spearmint. Light enough for after dinner, good enough for any time.",
-    "origin": "Benin City, Edo State, Nigeria",
+    "description": "Bright lemon verbena leaves grown in Benin Republic, paired with cool spearmint. Light enough for after dinner, good enough for any time.",
+    "origin": "Benin Republic",
     "ingredients": "Dried lemon verbena leaves, dried spearmint",
     "brewingInstructions": "Steep 1 tsp in 200ml water at 90°C for 3–4 minutes.",
     "price": 2600,
     "currency": "NGN",
     "inStock": true,
     "featured": false,
-    "imageUrl": "/images/products/lemon-verbena-mint.jpg",
+    "imageUrl": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&h=600&q=80",
     "variants": [
       { "size": "20 bags", "weight": "28g" }
     ],
-    "tags": ["lemon verbena", "mint", "herbal", "caffeine-free", "locally sourced tea Nigeria"]
+    "tags": ["lemon verbena", "mint", "herbal", "caffeine-free", "digestive", "refreshing"]
   },
   {
     "id": "ht-004",
     "name": "Bitter Leaf Tisane",
     "category": "herbal-tea",
     "teaType": "Herbal Blend",
-    "description": "A traditional Nigerian herb, carefully dried and prepared as a tisane. Distinctive in taste — not for everyone, entirely worth trying.",
-    "origin": "Benin City, Edo State, Nigeria",
+    "description": "A traditional herb from Benin Republic, carefully dried and prepared as a tisane. Distinctive in taste — not for everyone, entirely worth trying.",
+    "origin": "Benin Republic",
     "ingredients": "Dried bitter leaf (Vernonia amygdalina)",
     "brewingInstructions": "Steep 1 tsp in 200ml boiling water for 4 minutes. Do not over-steep.",
     "price": 2200,
     "currency": "NGN",
     "inStock": true,
     "featured": false,
-    "imageUrl": "/images/products/bitter-leaf.jpg",
+    "imageUrl": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=600&h=600&q=80",
     "variants": [
       { "size": "20 bags", "weight": "25g" }
     ],
-    "tags": ["bitter leaf", "traditional", "herbal", "caffeine-free", "tea from Benin Nigeria"]
+    "tags": ["bitter leaf", "traditional", "herbal", "caffeine-free", "vernonia", "west african"]
   },
   {
     "id": "ot-001",
-    "name": "Benin Garden Green",
+    "name": "Garden Green Tea",
     "category": "other-tea",
     "teaType": "Green Tea",
     "description": "A light, clean green tea. Grassy with a gentle sweetness. Picked young and dried carefully to keep the flavour intact.",
-    "origin": "Benin City, Edo State, Nigeria",
+    "origin": "Benin Republic",
     "ingredients": "Green tea leaves",
     "brewingInstructions": "Steep 1 tsp in 200ml water at 75°C for 2–3 minutes. Do not use boiling water.",
     "price": 3200,
     "currency": "NGN",
     "inStock": true,
     "featured": true,
-    "imageUrl": "/images/products/benin-green.jpg",
+    "imageUrl": "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&h=600&q=80",
     "variants": [
       { "size": "20 bags", "weight": "35g" },
       { "size": "Loose Leaf 75g", "weight": "75g" }
     ],
-    "tags": ["green tea", "Nigerian herbal tea", "caffeinated"]
+    "tags": ["green tea", "caffeinated", "antioxidant", "clean"]
   },
   {
     "id": "ot-002",
@@ -104,19 +104,19 @@
     "category": "other-tea",
     "teaType": "Black Tea",
     "description": "Full-bodied, malty black tea with a long finish. Works well on its own. Works even better with a little milk.",
-    "origin": "Benin City, Edo State, Nigeria",
+    "origin": "Benin Republic",
     "ingredients": "Black tea leaves",
     "brewingInstructions": "Steep 1 tsp in 200ml boiling water for 3–4 minutes.",
     "price": 3000,
     "currency": "NGN",
     "inStock": true,
     "featured": false,
-    "imageUrl": "/images/products/black-tea.jpg",
+    "imageUrl": "https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=600&h=600&q=80",
     "variants": [
       { "size": "20 bags", "weight": "40g" },
       { "size": "40 bags", "weight": "80g" }
     ],
-    "tags": ["black tea", "caffeinated", "herbal tea Benin"]
+    "tags": ["black tea", "caffeinated", "malty", "full-bodied"]
   },
   {
     "id": "ot-003",
@@ -124,94 +124,94 @@
     "category": "other-tea",
     "teaType": "Specialty Blend",
     "description": "Black tea base with warm spices: cinnamon, cardamom, cloves, and black pepper. Strong enough to hold up to milk.",
-    "origin": "Benin City, Edo State, Nigeria",
+    "origin": "Benin Republic",
     "ingredients": "Black tea, cinnamon, cardamom, cloves, black pepper, ginger",
     "brewingInstructions": "Steep 1–2 tsp in 200ml boiling water for 4–5 minutes. Add warm milk to taste.",
     "price": 3500,
     "currency": "NGN",
     "inStock": true,
     "featured": true,
-    "imageUrl": "/images/products/spiced-chai.jpg",
+    "imageUrl": "https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=600&h=600&q=80",
     "variants": [
       { "size": "20 bags", "weight": "45g" }
     ],
-    "tags": ["chai", "spiced", "black tea", "caffeinated", "specialty"]
+    "tags": ["chai", "spiced", "black tea", "caffeinated", "specialty", "cinnamon", "cardamom"]
   },
   {
     "id": "gs-001",
-    "name": "The Benin Starter Set",
+    "name": "The Starter Set",
     "category": "gift-set",
     "teaType": "Gift Set",
     "description": "Four of our most popular teas — moringa, hibiscus & ginger, green, and black — packed in a gift box. A good introduction to what we do.",
-    "origin": "Benin City, Edo State, Nigeria",
-    "ingredients": "Moringa Blend (8 bags), Hibiscus & Ginger (8 bags), Benin Garden Green (8 bags), Deep Earth Black (8 bags)",
+    "origin": "Benin Republic",
+    "ingredients": "Moringa Blend (8 bags), Hibiscus & Ginger (8 bags), Garden Green (8 bags), Deep Earth Black (8 bags)",
     "price": 9500,
     "currency": "NGN",
     "inStock": true,
     "featured": true,
-    "imageUrl": "/images/products/starter-set.jpg",
+    "imageUrl": "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=600&h=600&q=80",
     "variants": [],
-    "tags": ["gift", "set", "sampler", "tea from Benin Nigeria"]
+    "tags": ["gift", "set", "sampler", "tea gift box", "west africa"]
   },
   {
     "id": "gs-002",
     "name": "Herbal Collection Box",
     "category": "gift-set",
     "teaType": "Gift Set",
-    "description": "Six herbal teas from our Benin range, presented in a sturdy gift box. Good for gifting. Good for keeping.",
-    "origin": "Benin City, Edo State, Nigeria",
+    "description": "Six herbal teas from our Benin Republic range, presented in a sturdy gift box. Good for gifting. Good for keeping.",
+    "origin": "Benin Republic",
     "ingredients": "6 herbal tea varieties, 10 bags each",
     "price": null,
     "currency": "NGN",
     "inStock": true,
     "featured": false,
-    "imageUrl": "/images/products/herbal-collection.jpg",
+    "imageUrl": "https://images.unsplash.com/photo-1464979681340-bdd28a61699e?auto=format&fit=crop&w=600&h=600&q=80",
     "variants": [],
-    "tags": ["gift", "herbal", "collection", "Nigerian herbal tea"]
+    "tags": ["gift", "herbal", "collection", "assorted", "west african tea"]
   },
   {
     "id": "ac-001",
     "name": "Ceramic Tea Mug",
     "category": "accessory",
     "description": "A wide-mouthed ceramic mug. Holds 350ml. The glaze is warm cream — it looks good on a desk or a kitchen counter.",
-    "origin": "Nigeria",
+    "origin": "Benin Republic",
     "ingredients": "",
     "price": 4500,
     "currency": "NGN",
     "inStock": true,
     "featured": false,
-    "imageUrl": "/images/products/ceramic-mug.jpg",
+    "imageUrl": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=600&h=600&q=80",
     "variants": [],
-    "tags": ["mug", "accessory", "ceramic"]
+    "tags": ["mug", "accessory", "ceramic", "handmade"]
   },
   {
     "id": "ac-002",
     "name": "Stainless Loose-Leaf Infuser",
     "category": "accessory",
     "description": "Fine mesh stainless steel infuser. Fits most mugs and teapots. Easy to clean.",
-    "origin": "Nigeria",
+    "origin": "Benin Republic",
     "ingredients": "",
     "price": 2000,
     "currency": "NGN",
     "inStock": true,
     "featured": false,
-    "imageUrl": "/images/products/infuser.jpg",
+    "imageUrl": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&h=600&q=80",
     "variants": [],
-    "tags": ["infuser", "accessory", "loose leaf"]
+    "tags": ["infuser", "accessory", "loose leaf", "stainless steel"]
   },
   {
     "id": "ac-003",
     "name": "Ceramic Teapot — 500ml",
     "category": "accessory",
     "description": "Single-serve ceramic teapot in a warm off-white glaze. Comes with a built-in strainer.",
-    "origin": "Nigeria",
+    "origin": "Benin Republic",
     "ingredients": "",
     "price": 8500,
     "currency": "NGN",
     "inStock": false,
     "featured": false,
-    "imageUrl": "/images/products/teapot.jpg",
+    "imageUrl": "https://images.unsplash.com/photo-1589450537701-26a04e7be48e?auto=format&fit=crop&w=600&h=600&q=80",
     "variants": [],
-    "tags": ["teapot", "accessory", "ceramic"]
+    "tags": ["teapot", "accessory", "ceramic", "handmade"]
   }
 ]

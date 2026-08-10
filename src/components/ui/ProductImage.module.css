@@ -2,7 +2,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
+  transition: transform var(--transition-slow);
+}
+
+/* Card hover scales the image */
+:global(.card:hover) .image {
+  transform: scale(1.06);
 }
 
 /* Placeholder — shown when image is missing or fails to load */

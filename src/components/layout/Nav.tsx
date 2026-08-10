@@ -26,13 +26,42 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
+  // Timeout refs for dropdown hover — fixes the gap-crossing bug
+  const teasTimerRef   = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const engageTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  function openTeas() {
+    if (teasTimerRef.current) clearTimeout(teasTimerRef.current);
+    setTeasOpen(true);
+    setEngageOpen(false);
+    if (engageTimerRef.current) clearTimeout(engageTimerRef.current);
+  }
+  function scheduleTeasClose() {
+    teasTimerRef.current = setTimeout(() => setTeasOpen(false), 150);
+  }
+  function cancelTeasClose() {
+    if (teasTimerRef.current) clearTimeout(teasTimerRef.current);
+  }
+
+  function openEngage() {
+    if (engageTimerRef.current) clearTimeout(engageTimerRef.current);
+    setEngageOpen(true);
+    setTeasOpen(false);
+    if (teasTimerRef.current) clearTimeout(teasTimerRef.current);
+  }
+  function scheduleEngageClose() {
+    engageTimerRef.current = setTimeout(() => setEngageOpen(false), 150);
+  }
+  function cancelEngageClose() {
+    if (engageTimerRef.current) clearTimeout(engageTimerRef.current);
+  }
+
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 12);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on navigation
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden";
@@ -42,7 +71,6 @@ export default function Nav() {
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
-  // Close dropdowns when clicking outside
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
@@ -58,6 +86,8 @@ export default function Nav() {
     setMenuOpen(false);
     setTeasOpen(false);
     setEngageOpen(false);
+    if (teasTimerRef.current) clearTimeout(teasTimerRef.current);
+    if (engageTimerRef.current) clearTimeout(engageTimerRef.current);
   }
 
   return (
@@ -66,7 +96,7 @@ export default function Nav() {
         {/* Logo */}
         <Link to="/" className={styles.logo} onClick={closeAll} aria-label="Herbs & Teas — Home">
           <span className={styles.logoText}>Herbs&nbsp;&amp;&nbsp;Teas</span>
-          <span className={styles.logoSub}>Rooted in Benin</span>
+          <span className={styles.logoSub}>Rooted in Benin Republic</span>
         </Link>
 
         {/* Desktop nav */}
@@ -77,13 +107,13 @@ export default function Nav() {
               className={styles.navItem}
               aria-expanded={teasOpen}
               aria-haspopup="true"
-              onMouseEnter={() => { setTeasOpen(true); setEngageOpen(false); }}
-              onMouseLeave={() => setTeasOpen(false)}
+              onMouseEnter={openTeas}
+              onMouseLeave={scheduleTeasClose}
               onClick={() => { setTeasOpen((v) => !v); setEngageOpen(false); }}
               onKeyDown={(e) => { if (e.key === "Escape") setTeasOpen(false); }}
             >
               Teas
-              <svg className={styles.chevron} aria-hidden="true" width="12" height="12" viewBox="0 0 12 12">
+              <svg className={`${styles.chevron} ${teasOpen ? styles.chevronOpen : ""}`} aria-hidden="true" width="12" height="12" viewBox="0 0 12 12">
                 <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
               </svg>
             </button>
@@ -91,8 +121,8 @@ export default function Nav() {
               <ul
                 className={styles.dropdown}
                 role="menu"
-                onMouseEnter={() => setTeasOpen(true)}
-                onMouseLeave={() => setTeasOpen(false)}
+                onMouseEnter={cancelTeasClose}
+                onMouseLeave={scheduleTeasClose}
               >
                 {TEAS_LINKS.map((l) => (
                   <li key={l.label} role="none">
@@ -111,13 +141,13 @@ export default function Nav() {
               className={styles.navItem}
               aria-expanded={engageOpen}
               aria-haspopup="true"
-              onMouseEnter={() => { setEngageOpen(true); setTeasOpen(false); }}
-              onMouseLeave={() => setEngageOpen(false)}
+              onMouseEnter={openEngage}
+              onMouseLeave={scheduleEngageClose}
               onClick={() => { setEngageOpen((v) => !v); setTeasOpen(false); }}
               onKeyDown={(e) => { if (e.key === "Escape") setEngageOpen(false); }}
             >
               Engage Us
-              <svg className={styles.chevron} aria-hidden="true" width="12" height="12" viewBox="0 0 12 12">
+              <svg className={`${styles.chevron} ${engageOpen ? styles.chevronOpen : ""}`} aria-hidden="true" width="12" height="12" viewBox="0 0 12 12">
                 <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
               </svg>
             </button>
@@ -125,8 +155,8 @@ export default function Nav() {
               <ul
                 className={styles.dropdown}
                 role="menu"
-                onMouseEnter={() => setEngageOpen(true)}
-                onMouseLeave={() => setEngageOpen(false)}
+                onMouseEnter={cancelEngageClose}
+                onMouseLeave={scheduleEngageClose}
               >
                 {ENGAGE_LINKS.map((l) => (
                   <li key={l.label} role="none">
@@ -197,7 +227,6 @@ export default function Nav() {
             Get a Quote
           </Link>
         </nav>
-        {/* Fallback if JS fails — always-visible links */}
         <noscript>
           <ul className={styles.fallbackLinks}>
             <li><a href="/teas">Teas</a></li>

@@ -11,7 +11,7 @@ export default function Footer() {
         <div className={styles.brand}>
           <p className={styles.brandName}>Herbs &amp; Teas</p>
           <p className={styles.tagline}>
-            Planted in Benin. Carefully selected. Good for slow mornings and long conversations.
+            Planted in Benin Republic. Carefully selected. Good for slow mornings and long conversations.
           </p>
           <div className={styles.social} aria-label="Social media links">
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -71,7 +71,7 @@ export default function Footer() {
 
       <div className={`container ${styles.bottom}`}>
         <p>&copy; {year} Herbs &amp; Teas. All rights reserved.</p>
-        <p className={styles.origin}>Rooted in Benin, Nigeria.</p>
+        <p className={styles.origin}>Rooted in Benin Republic.</p>
       </div>
     </footer>
   );

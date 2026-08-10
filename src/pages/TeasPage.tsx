@@ -79,7 +79,7 @@ export default function TeasPage() {
         <section className={styles.hero} aria-label="Teas hero">
           <div className={styles.heroOverlay} aria-hidden="true" />
           <div className={`container ${styles.heroContent}`}>
-            <p className={styles.heroEyebrow}>Herbal Teas from Benin Nigeria</p>
+            <p className={styles.heroEyebrow}>Herbal Teas from Benin Republic</p>
             <h1 className={styles.heroHeadline}>
               Good tea starts long<br />before the kettle.
             </h1>
@@ -176,9 +176,13 @@ export default function TeasPage() {
                     onKeyDown={(e) => { if (e.key === "Enter") openDetail(p); }}
                   >
                     <div className={styles.featuredHeroImg}>
-                      <div className={styles.featuredImgBg} aria-hidden="true">
-                        <span className={styles.featuredImgPlaceholder}>🌿</span>
-                      </div>
+                      <img
+                        src={p.imageUrl}
+                        alt={p.name}
+                        className={styles.featuredHeroImgEl}
+                        loading="eager"
+                        onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0'; }}
+                      />
                     </div>
                     <div className={styles.featuredHeroBody}>
                       {p.teaType && <p className={styles.featuredEyebrow}>{p.teaType}</p>}
@@ -216,13 +220,13 @@ export default function TeasPage() {
                 </div>
                 {/* Content side */}
                 <div className={styles.spotlightContent}>
-                  <p className={styles.spotlightEyebrow}>Herbal Teas — Locally Sourced Tea Nigeria</p>
+                  <p className={styles.spotlightEyebrow}>Herbal Teas — Locally Sourced from Benin Republic</p>
                   <h2 id="spotlight-heading" className={styles.spotlightTitle}>
                     From the soil of Benin<br />to your cup.
                   </h2>
                   <div className={styles.spotlightBody}>
                     <p>
-                      Our herbal teas begin with plants grown in Benin, Edo State — moringa, hibiscus,
+                      Our herbal teas begin with plants grown in Benin Republic — moringa, hibiscus,
                       lemon verbena, bitter leaf, and more. Each herb is chosen for how it tastes and
                       where it comes from. Not for how it photographs.
                     </p>
@@ -233,7 +237,7 @@ export default function TeasPage() {
                     </p>
                     <p>
                       These are teas for everyday life — a slow morning, a quiet afternoon, something
-                      warm after dinner. Nigerian herbal tea, grown with care and made to be enjoyed.
+                      warm after dinner. West African herbal tea, grown with care and made to be enjoyed.
                     </p>
                   </div>
                   <a href="#herbal-grid" className={styles.spotlightCta}>Browse Herbal Teas</a>
@@ -249,7 +253,7 @@ export default function TeasPage() {
             <div className="container">
               <h2 id="herbal-heading" className={styles.sectionTitle}>Herbal Teas</h2>
               <p className={styles.sectionSub}>
-                Herbal tea Benin — tisanes and infusions grown and dried in Edo State, Nigeria.
+                Tisanes and infusions grown and dried in Benin Republic — caffeine-free and naturally flavourful.
               </p>
               <div className={styles.productGrid}>
                 {herbalTeas.map((p) => (
@@ -266,25 +270,29 @@ export default function TeasPage() {
             <div className="container">
               <div className={styles.originInner}>
                 <div className={styles.originContent}>
-                  <p className={styles.originEyebrow}>Our Origin — Tea from Benin Nigeria</p>
+                  <p className={styles.originEyebrow}>Our Origin — Teas from Benin Republic</p>
                   <h2 id="origin-heading" className={styles.originTitle}>
                     Rooted in Benin.<br />Crafted for every cup.
                   </h2>
                   <p className={styles.originBody}>
-                    Benin has the soil, the climate, and the botanical heritage. Our teas are grown
-                    by farmers in Edo State who have worked this land for generations. We source
+                    Benin Republic has the soil, the climate, and the botanical heritage. Our teas are grown
+                    by farmers who have worked this land for generations. We source
                     directly — no middlemen, no mystery. The herbs are dried in small batches during
                     the right season, which is why each cup tastes the way it does.
                   </p>
                   <p className={styles.originBody}>
-                    This is not "African-inspired." This is from Africa — specifically from Benin,
+                    This is not "African-inspired." This is from Africa — specifically from Benin Republic,
                     specifically from people who know these plants by name, season, and smell.
                   </p>
                 </div>
                 <div className={styles.originImage} aria-hidden="true">
-                  <div className={styles.originImgBg}>
-                    <span className={styles.originImgIcon}>🍵</span>
-                  </div>
+                  <img
+                    src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=600&h=700&q=80"
+                    alt="Herbal tea farm in Benin Republic"
+                    className={styles.originImgEl}
+                    loading="lazy"
+                    onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0'; }}
+                  />
                 </div>
               </div>
             </div>
