@@ -1,0 +1,34 @@
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Placeholder — shown when image is missing or fails to load */
+.placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-cream-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  text-align: center;
+  padding: var(--space-4);
+}
+
+.icon {
+  font-size: 2.5rem;
+  opacity: 0.6;
+}
+
+.placeholderName {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-ink-muted);
+  max-width: 14ch;
+  line-height: var(--leading-snug);
+}
