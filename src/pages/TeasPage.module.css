@@ -8,16 +8,41 @@
   overflow: hidden;
 }
 
+/* Real photo background — sits behind the overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/hero-plantation.jpg");
+  background-size: cover;
+  background-position: center 60%;
+  background-repeat: no-repeat;
+  /* Subtle Ken Burns zoom for a living feel */
+  animation: heroZoom 20s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes heroZoom {
+  from { transform: scale(1);    }
+  to   { transform: scale(1.06); }
+}
+
+/* @media: respect reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero::before { animation: none; }
+}
+
 .heroOverlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     140deg,
-    rgba(0, 40, 0, 0.96) 0%,
-    rgba(0, 57, 0, 0.80) 55%,
-    rgba(0, 57, 0, 0.55) 100%
+    rgba(0, 30, 0, 0.82) 0%,
+    rgba(0, 45, 0, 0.60) 55%,
+    rgba(0, 45, 0, 0.35) 100%
   );
 }
+
 
 .heroContent {
   position: relative;
