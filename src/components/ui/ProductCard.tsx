@@ -2,16 +2,13 @@ import { useNavigate } from "react-router-dom";
 import type { Product } from "../../types";
 import ProductImage from "./ProductImage";
 import styles from "./ProductCard.module.css";
+import { useCurrency, formatConvertedPrice } from "../../context/CurrencyContext";
 
 interface Props {
   product: Product;
   onOpenDetail: (product: Product) => void;
 }
 
-function formatPrice(price: number | null, currency: string): string {
-  if (price === null) return "Request Price";
-  return new Intl.NumberFormat("en-NG", { style: "currency", currency, maximumFractionDigits: 0 }).format(price);
-}
 
 function getCta(product: Product): string {
   if (!product.inStock) return "Notify Me";
@@ -21,6 +18,7 @@ function getCta(product: Product): string {
 
 export default function ProductCard({ product, onOpenDetail }: Props) {
   const navigate = useNavigate();
+  const currencyInfo = useCurrency();
 
   function handleCta(e: React.MouseEvent) {
     e.stopPropagation();
@@ -68,8 +66,8 @@ export default function ProductCard({ product, onOpenDetail }: Props) {
         <p className={styles.description}>{product.description.slice(0, 100)}{product.description.length > 100 ? "…" : ""}</p>
 
         <div className={styles.footer}>
-          <p className={styles.price} aria-label={`Price: ${formatPrice(product.price, product.currency)}`}>
-            {formatPrice(product.price, product.currency)}
+          <p className={styles.price} aria-label={`Price: ${formatConvertedPrice(product.price, currencyInfo)}`}>
+            {formatConvertedPrice(product.price, currencyInfo)}
           </p>
           <button
             className={`${styles.cta} ${!product.inStock ? styles.ctaNotify : ""}`}

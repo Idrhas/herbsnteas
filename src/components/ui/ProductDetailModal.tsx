@@ -3,25 +3,18 @@ import { useNavigate } from "react-router-dom";
 import type { Product } from "../../types";
 import ProductImage from "./ProductImage";
 import styles from "./ProductDetailModal.module.css";
+import { useCurrency, formatConvertedPrice } from "../../context/CurrencyContext";
 
 interface Props {
   product: Product | null;
   onClose: () => void;
 }
 
-function formatPrice(price: number | null, currency: string): string {
-  if (price === null) return "Request Price";
-  return new Intl.NumberFormat("en-NG", {
-    style: "currency",
-    currency,
-    maximumFractionDigits: 0,
-  }).format(price);
-}
-
 export default function ProductDetailModal({ product, onClose }: Props) {
   const navigate = useNavigate();
   const panelRef = useRef<HTMLDivElement>(null);
   const closeBtnRef = useRef<HTMLButtonElement>(null);
+  const currencyInfo = useCurrency();
 
   // Focus trap and keyboard close
   useEffect(() => {
@@ -90,7 +83,7 @@ export default function ProductDetailModal({ product, onClose }: Props) {
             <h2 className={styles.name}>{product.name}</h2>
 
             <p className={styles.price}>
-              {formatPrice(product.price, product.currency)}
+              {formatConvertedPrice(product.price, currencyInfo)}
             </p>
 
             <p className={styles.description}>{product.description}</p>

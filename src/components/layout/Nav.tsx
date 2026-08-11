@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { NavLink, Link } from "react-router-dom";
 import styles from "./Nav.module.css";
+import { useCurrency } from "../../context/CurrencyContext";
 
 const TEAS_LINKS = [
   { label: "All Teas", to: "/teas" },
@@ -25,6 +26,7 @@ export default function Nav() {
   const [engageOpen, setEngageOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const currencyInfo = useCurrency();
 
   // Timeout refs for dropdown hover — fixes the gap-crossing bug
   const teasTimerRef   = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -175,6 +177,22 @@ export default function Nav() {
         </nav>
 
         <div className={styles.navRight}>
+          {/* Currency indicator */}
+          <div
+            className={`${styles.currencyPill} ${currencyInfo.loading ? styles.currencyPillLoading : ""}`}
+            title={currencyInfo.isNGN
+              ? "Prices shown in Nigerian Naira (NGN)"
+              : `Prices shown in ${currencyInfo.currency} — includes international markup`
+            }
+            aria-label={`Currency: ${currencyInfo.currency}`}
+          >
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span>{currencyInfo.loading ? "…" : currencyInfo.currency}</span>
+          </div>
           <Link to="/engage-us#quote" className={styles.ctaBtn} onClick={closeAll}>
             Get a Quote
           </Link>
